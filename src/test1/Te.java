@@ -2,6 +2,7 @@ package test1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -17,7 +18,6 @@ public class Te {
 	public void run() {
 		String p = "WRWWLWWLWWLWLWRRWRWWWRWWRWLW";
 		String o = "WWRRWLWLWWLWWLWWRWWRWWLW";	
-		
 		//String p = "WW";
 		//String o = "WW";	
 		int angle = 180;
@@ -179,96 +179,92 @@ public class Te {
 		arr[g][f].setN(true);
 		
 		List<String> fin = new ArrayList<>();
-		//String str = "";
-		String u = "4444";
-		System.out.print(u);
 		for(int k = 0; k < arr.length; k++) {
+			String t = "";
 			//ArrayList <String> arr1=new ArrayList<>();
 			for(int z = 0; z < arr[k].length; z++) {
 				if (arr[k][z].getProi().equals("y")) {
 					if (arr[k][z].isN() && !arr[k][z].isS() && !arr[k][z].isW() && !arr[k][z].isE()) {
 						//System.out.print("1"+" ");
-						//arr.add("1");
-						u = u + "1";
+						//arr1.add("1");
+						t = t + "1";
 					}
 					if (!arr[k][z].isN() && arr[k][z].isS() && !arr[k][z].isW() && !arr[k][z].isE()) {
 						//System.out.print("2"+" ");
-						u = u + "2";
+						//arr1.add("2");
+						t = t + "2";
 					}
 					if (arr[k][z].isN() && arr[k][z].isS() && !arr[k][z].isW() && !arr[k][z].isE()) {
 						//System.out.print("3"+" ");
-						u = u + "3";
-
+						//arr1.add("3");
+						t = t + "3";
 					}
 					if (!arr[k][z].isN() && !arr[k][z].isS() && arr[k][z].isW() && !arr[k][z].isE()) {
 						//System.out.print("4"+" ");
-						u = u + "4";
-
+						//arr1.add("4");
+						t = t + "4";
 					}
 					if (arr[k][z].isN() && !arr[k][z].isS() && arr[k][z].isW() && !arr[k][z].isE()) {
 						//System.out.print("5"+" ");
-						u = u + "5";
-
+						//arr1.add("5");
+						t = t + "5";
 					}
 					if (!arr[k][z].isN() && arr[k][z].isS() && arr[k][z].isW() && !arr[k][z].isE()) {
 						//System.out.print("6"+" ");
-						u = u + "6";
-
+						//arr1.add("6");
+						t = t + "6";
 					}
 					if (arr[k][z].isN() && arr[k][z].isS() && arr[k][z].isW() && !arr[k][z].isE()) {
 						//System.out.print("7"+" ");
-						u = u + "7";
-
+						//arr1.add("7");
+						t = t + "7";
 					}
 					if (!arr[k][z].isN() && !arr[k][z].isS() && !arr[k][z].isW() && arr[k][z].isE()) {
 						//System.out.print("8"+" ");
-						u = u + "8";
-
+						//arr1.add("8");
+						t = t + "8";
 					}
 					if (arr[k][z].isN() && !arr[k][z].isS() && !arr[k][z].isW() && arr[k][z].isE()) {
 						//System.out.print("9"+" ");
-						u = u + "9";
-
+						//arr1.add("9");
+						t = t + "9";
 					}
 					if (!arr[k][z].isN() && arr[k][z].isS() && !arr[k][z].isW() && arr[k][z].isE()) {
 						//System.out.print("a"+" ");
-						u = u + "a";
-
+						//arr1.add("a");
+						t = t + "a";
 					}
 					if (arr[k][z].isN() && arr[k][z].isS() && !arr[k][z].isW() && arr[k][z].isE()) {
 						//System.out.print("b"+" ");
-						u = u + "b";
-
+						//arr1.add("b");
+						t = t + "b";
 					}
 					if (!arr[k][z].isN() && !arr[k][z].isS() && arr[k][z].isW() && arr[k][z].isE()) {
 						//System.out.print("c"+" ");
-						u = u + "c";
-
+						t = t + "c";
+						//arr1.add("c");
 					}
 					if (arr[k][z].isN() && !arr[k][z].isS() && arr[k][z].isW() && arr[k][z].isE()) {
 						//System.out.print("d"+" ");
-						u = u + "d";
+						//arr1.add("d");
+						t = t + "d";
 					}
 					if (!arr[k][z].isN() && arr[k][z].isS() && arr[k][z].isW() && arr[k][z].isE()) {
 						//System.out.print("e"+" ");
-						u = u + "e";
-
+						//arr1.add("e");
+						t = t + "e";
 					}
 					if (arr[k][z].isN() && arr[k][z].isS() && arr[k][z].isW() && arr[k][z].isE()) {
 						//System.out.print("f"+" ");
-						u = u + "f";
-
+						t = t + "f";
 					}
-					System.out.print(u);
-				}
-				fin.add(u);
+				}	
 			}
-			
+			fin.add(t);
 		}
-		
-		//for(int k = 0; k < fin.size(); k++) {
-			System.out.println(fin);
-		//}
+		//fin.removeAll(Collections.singleton(""));
+		fin.removeAll(Arrays.asList(""));
+		System.out.println(fin);
 		/*for(int k = 0; k < arr.length; k++) {
 			for(int z = 0; z < arr[k].length; z++) {
 				if (arr[k][z].getProi().equals("y")) {
